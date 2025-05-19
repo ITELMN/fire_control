@@ -1,0 +1,148 @@
+:root {
+  --primary-color: #3B82F6;
+  --primary-color-dark: #2563EB;
+  --primary-color-light: #60A5FA;
+  --primary-color-hover: #1D4ED8;
+  
+  --secondary-color: #10B981;
+  --secondary-color-dark: #059669;
+  --secondary-color-light: #34D399;
+  
+  --danger-color: #EF4444;
+  --danger-color-dark: #DC2626;
+  --danger-color-light: #F87171;
+  
+  --warning-color: #F59E0B;
+  --warning-color-dark: #D97706;
+  --warning-color-light: #FBBF24;
+  
+  --success-color: #10B981;
+  --success-color-dark: #059669;
+  --success-color-light: #34D399;
+  
+  --info-color: #3B82F6;
+  --info-color-dark: #2563EB;
+  --info-color-light: #60A5FA;
+  
+  --text-color: #1F2937;
+  --text-color-light: #6B7280;
+  --border-color: #E5E7EB;
+  --background-color: #F9FAFB;
+  
+  --primary-color-rgb: 59, 130, 246;
+  --primary-color-dark-rgb: 37, 99, 235;
+  --primary-color-light-rgb: 96, 165, 250;
+  
+  --secondary-color-rgb: 16, 185, 129;
+  --secondary-color-dark-rgb: 5, 150, 105;
+  --secondary-color-light-rgb: 52, 211, 153;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* 大屏幕适配 */
+@media (min-width: 1920px) {
+  .h-120 {
+    height: 30rem;
+  }
+  
+  .card {
+    border-radius: 0.75rem;
+    padding: 2rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .h-120 {
+    height: 36rem;
+  }
+  
+  .card {
+    border-radius: 1rem;
+    padding: 2.5rem;
+  }
+  
+  .btn {
+    padding: 1rem 2rem;
+    border-radius: 0.625rem;
+  }
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-color-dark);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: var(--danger-color-dark);
+}
+
+.btn-warning {
+  background-color: var(--warning-color);
+  color: white;
+}
+
+.btn-warning:hover {
+  background-color: var(--warning-color-dark);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: var(--success-color-dark);
+}
+
+.btn-info {
+  background-color: var(--info-color);
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: var(--info-color-dark);
+}
+
+/* 淡入淡出动画 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <title>Sine Wave</title>
+  <style>
+    .wave {
+      fill: none;
+      stroke: #007BFF; /* Blue color */
+      stroke-width: 2;
+    }
+  </style>
+  <path class="wave" id="sineWave" d="M0,50 C50,10 150,90 200,50" />
+  <script>
+    // You can add JavaScript here to animate the wave, if needed.
+    // For example, to make it oscillate:
+    let phase = 0;
+    function animate() {
+      phase += 0.1; // Adjust for speed
+      const path = document.getElementById('sineWave');
+      let d = 'M0,50';
+      for (let x = 0; x <= 200; x++) {
+        const y = 50 + Math.sin(x / 20 + phase) * 40; // Adjust amplitude and frequency
+        d += ` L${x},${y}`;
+      }
+      path.setAttribute('d', d);
+      requestAnimationFrame(animate);
+    }
+    animate(); // Start the animation
+
+  </script>
+</svg>
