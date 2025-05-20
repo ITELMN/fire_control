@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100">
+  <div class="min-h-screen bg-gradient-to-r from-cyan-100 via-blue-300 to-indigo-400">
     <Header />
     <div class="max-w-7xl 3xl:max-w-8xl 4xl:max-w-9xl mx-auto px-4 py-2 3xl:py-4 4xl:py-6">
       <!-- 主要内容区域 -->
@@ -42,7 +42,7 @@
         <div class="col-span-1 space-y-4 3xl:space-y-6">
           <!-- MQTT通信速率 -->
           <div class="backdrop-blur-lg bg-white/70 p-4 3xl:p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl border border-white/50">
-            <div class="h-52 3xl:h-64 4xl:h-72 relative">
+            <div class="h-60 3xl:h-64 4xl:h-72 relative">
               <CommunicationChart 
                 title="MQTT通信速率"
                 color="#1E40AF"
@@ -55,7 +55,7 @@
 
           <!-- 插件通信速率 -->
           <div class="backdrop-blur-lg bg-white/70 p-4 3xl:p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl border border-white/50">
-            <div class="h-52 3xl:h-64 4xl:h-72 relative">
+            <div class="h-60 3xl:h-64 4xl:h-72 relative">
               <CommunicationChart 
                 title="插件通信速率"
                 color="#7C3AED"
